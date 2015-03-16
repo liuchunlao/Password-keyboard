@@ -14,8 +14,9 @@
 		125830F61A9F106200931438 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125830F41A9F106200931438 /* LaunchScreen.xib */; };
 		125831021A9F106200931438 /* customKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 125831011A9F106200931438 /* customKeyboardTests.m */; };
 		125831101A9F194700931438 /* LVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1258310F1A9F194700931438 /* LVViewController.m */; };
-		D953BB1B1A9F6BA1004E5006 /* LVKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D953BB1A1A9F6BA0004E5006 /* LVKeyboardView.m */; };
 		D9B83F2C1A9F42EA00A1C817 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B83F2B1A9F42EA00A1C817 /* UIView+Extension.m */; };
+		D9BC38D41AB7308A005C7E7D /* LVKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BC38D31AB7308A005C7E7D /* LVKeyboardView.m */; };
+		D9BC38D71AB730DB005C7E7D /* LVKeyboardAccessoryBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BC38D61AB730DB005C7E7D /* LVKeyboardAccessoryBtn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +43,12 @@
 		125831011A9F106200931438 /* customKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = customKeyboardTests.m; sourceTree = "<group>"; };
 		1258310E1A9F194700931438 /* LVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVViewController.h; sourceTree = "<group>"; };
 		1258310F1A9F194700931438 /* LVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVViewController.m; sourceTree = "<group>"; };
-		D953BB191A9F6BA0004E5006 /* LVKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVKeyboardView.h; sourceTree = "<group>"; };
-		D953BB1A1A9F6BA0004E5006 /* LVKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVKeyboardView.m; sourceTree = "<group>"; };
 		D9B83F2A1A9F42EA00A1C817 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		D9B83F2B1A9F42EA00A1C817 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D9BC38D21AB7308A005C7E7D /* LVKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVKeyboardView.h; sourceTree = "<group>"; };
+		D9BC38D31AB7308A005C7E7D /* LVKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVKeyboardView.m; sourceTree = "<group>"; };
+		D9BC38D51AB730DB005C7E7D /* LVKeyboardAccessoryBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVKeyboardAccessoryBtn.h; sourceTree = "<group>"; };
+		D9BC38D61AB730DB005C7E7D /* LVKeyboardAccessoryBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVKeyboardAccessoryBtn.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 		125830E41A9F106200931438 /* customKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D9BC38D11AB7308A005C7E7D /* CustomKeyboard */,
 				D9B83F291A9F42EA00A1C817 /* UIViewExtension */,
 				125830E91A9F106200931438 /* AppDelegate.h */,
 				125830EA1A9F106200931438 /* AppDelegate.m */,
@@ -126,23 +130,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D953BB181A9F6BA0004E5006 /* CustomKeyboard */ = {
-			isa = PBXGroup;
-			children = (
-				D953BB191A9F6BA0004E5006 /* LVKeyboardView.h */,
-				D953BB1A1A9F6BA0004E5006 /* LVKeyboardView.m */,
-			);
-			path = CustomKeyboard;
-			sourceTree = "<group>";
-		};
 		D9B83F291A9F42EA00A1C817 /* UIViewExtension */ = {
 			isa = PBXGroup;
 			children = (
-				D953BB181A9F6BA0004E5006 /* CustomKeyboard */,
 				D9B83F2A1A9F42EA00A1C817 /* UIView+Extension.h */,
 				D9B83F2B1A9F42EA00A1C817 /* UIView+Extension.m */,
 			);
 			path = UIViewExtension;
+			sourceTree = "<group>";
+		};
+		D9BC38D11AB7308A005C7E7D /* CustomKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D9BC38D51AB730DB005C7E7D /* LVKeyboardAccessoryBtn.h */,
+				D9BC38D61AB730DB005C7E7D /* LVKeyboardAccessoryBtn.m */,
+				D9BC38D21AB7308A005C7E7D /* LVKeyboardView.h */,
+				D9BC38D31AB7308A005C7E7D /* LVKeyboardView.m */,
+			);
+			path = CustomKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +253,10 @@
 			files = (
 				D9B83F2C1A9F42EA00A1C817 /* UIView+Extension.m in Sources */,
 				125830EB1A9F106200931438 /* AppDelegate.m in Sources */,
+				D9BC38D71AB730DB005C7E7D /* LVKeyboardAccessoryBtn.m in Sources */,
 				125830E81A9F106200931438 /* main.m in Sources */,
 				125831101A9F194700931438 /* LVViewController.m in Sources */,
-				D953BB1B1A9F6BA1004E5006 /* LVKeyboardView.m in Sources */,
+				D9BC38D41AB7308A005C7E7D /* LVKeyboardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

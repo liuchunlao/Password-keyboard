@@ -8,6 +8,7 @@
 
 #import "LVViewController.h"
 #import "LVKeyboardView.h"
+#import "LVKeyboardAccessoryBtn.h"
 #import "UIView+Extension.h"
 
 @interface LVViewController () <UITextFieldDelegate, LVKeyboardDelegate>
@@ -26,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.textField.inputAccessoryView = [[LVKeyboardAccessoryBtn alloc] init];
     self.textField.delegate = self;
 }
 
