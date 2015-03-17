@@ -28,6 +28,7 @@
     [super viewDidLoad];
     
     self.textField.inputAccessoryView = [[LVKeyboardAccessoryBtn alloc] init];
+    self.textField.inputView = self.keyboard;
     self.textField.delegate = self;
 }
 
@@ -37,10 +38,10 @@
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    self.textField.inputView = self.keyboard;
+    self.textField.text = nil;
+    self.passWord = nil;
     return YES;
 }
-
 
 - (void)keyboard:(LVKeyboardView *)keyboard didClickButton:(UIButton *)button {
     
