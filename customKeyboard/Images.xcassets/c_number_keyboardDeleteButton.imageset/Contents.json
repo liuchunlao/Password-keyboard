@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "c_character_keyboardDeleteButton.png"
+      "filename" : "c_number_keyboardDeleteButton.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "c_character_keyboardDeleteButton@2x.png"
+      "filename" : "c_number_keyboardDeleteButton@2x.png"
     },
     {
       "idiom" : "universal",

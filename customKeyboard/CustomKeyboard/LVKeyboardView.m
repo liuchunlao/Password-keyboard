@@ -49,13 +49,28 @@
 #pragma mark - 数字按钮
 - (void)setupTopButtonsWithImage:(UIImage *)image highImage:(UIImage *)highImage {
     
+    NSMutableArray *arrM = [NSMutableArray array];
+    [arrM removeAllObjects];
+    for (int i = 0 ; i < 10; i++) {
+        int j = arc4random_uniform(10);
+        
+        NSNumber *number = [[NSNumber alloc] initWithInt:j];
+        if ([arrM containsObject:number]) {
+            i--;
+            continue;
+        }
+        [arrM addObject:number];
+    }
+    
     for (int i = 0; i < 10; i++) {
        
         UIButton *numBtn = [[UIButton alloc] init];
+        NSNumber *number = arrM[i];
+        NSString *title = number.stringValue;
+        [numBtn setTitle:title forState:UIControlStateNormal];
+        
         [numBtn setBackgroundImage:image forState:UIControlStateNormal];
         [numBtn setBackgroundImage:highImage forState:UIControlStateHighlighted];
-        NSString *title = [NSString stringWithFormat:@"%d",i];
-        [numBtn setTitle:title forState:UIControlStateNormal];
         numBtn.titleLabel.font = [UIFont boldSystemFontOfSize:LVKeyboardTextFont];
         [numBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [numBtn addTarget:self action:@selector(numBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -80,8 +95,8 @@
     
     // 删除按钮
     self.deleteBtn = [self setupBottomButtonWithTitle:nil image:nil];
-    [self.deleteBtn setImage:[UIImage imageNamed:@"c_character_keyboardDeleteButton"] forState:UIControlStateNormal];
-    [self.deleteBtn setImage:[UIImage imageNamed:@"c_character_keyboardDeleteButtonSel"] forState:UIControlStateHighlighted];
+    [self.deleteBtn setBackgroundImage:[UIImage imageNamed:@"c_number_keyboardDeleteButton"] forState:UIControlStateNormal];
+    [self.deleteBtn setBackgroundImage:[UIImage imageNamed:@"c_number_keyboardDeleteButtonSel"] forState:UIControlStateHighlighted];
     self.deleteBtn.contentMode = UIViewContentModeCenter;
     [self.deleteBtn addTarget:self action:@selector(deleteBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
