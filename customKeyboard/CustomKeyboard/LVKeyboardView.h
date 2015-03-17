@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+Extension.h"
+#import "LVKeyboardAccessoryBtn.h"
 
 @class LVKeyboardView;
 @protocol LVKeyboardDelegate <NSObject>

@@ -7,7 +7,6 @@
 //
 
 #import "LVKeyboardView.h"
-#import "UIView+Extension.h"
 
 #define LVKeyboardCols 3
 #define LVKeyboardTextFont 20
