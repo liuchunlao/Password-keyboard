@@ -78,3 +78,5 @@ self.textField.delegate = self;
 //}
 /***************结束*************/
 ```
+## 密码键盘效果图
+![](https://github.com/liuchunlao/ImageCache/raw/master/gifResource/passwordKeyboard.gif)
