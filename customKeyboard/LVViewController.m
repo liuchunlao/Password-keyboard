@@ -37,15 +37,26 @@
     [self.textField resignFirstResponder];
 }
 
+/***************需要*************/
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     self.textField.text = nil;
     self.passWord = nil;
+    
+    CGFloat x = 0;
+    CGFloat y = self.view.height - 216;
+    CGFloat w = self.view.width;
+    CGFloat h = 216;
+    self.keyboard = [[LVKeyboardView alloc] initWithFrame:CGRectMake(x, y, w, h)];
+    self.keyboard.delegate = self;
+    
+    self.textField.inputView = _keyboard;
+    
     return YES;
 }
 
+#pragma mark - LVKeyboardDelegate
 - (void)keyboard:(LVKeyboardView *)keyboard didClickButton:(UIButton *)button {
     
-//    NSLog(@"%@", button.currentTitle);
     if (self.passWord.length > 5) return;
     [self.passWord appendString:button.currentTitle];
     
@@ -63,25 +74,27 @@
     NSLog(@"%@", self.textField.text);
 }
 
-- (LVKeyboardView *)keyboard {
-    if (!_keyboard) {
-        CGFloat x = 0;
-        CGFloat y = self.view.height - 216;
-        CGFloat w = self.view.width;
-        CGFloat h = 216;
-        _keyboard = [[LVKeyboardView alloc] initWithFrame:CGRectMake(x, y, w, h)];
-        _keyboard.delegate = self;
-    }
-    return _keyboard;
-}
-
-
+#pragma mark - 需要
 - (NSMutableString *)passWord {
     if (!_passWord) {
         _passWord = [NSMutableString stringWithCapacity:6];
     }
     return _passWord;
 }
+
+#pragma mark - 如果不需要随机变换数字需要
+//- (LVKeyboardView *)keyboard {
+//    if (!_keyboard) {
+//        CGFloat x = 0;
+//        CGFloat y = self.view.height - 216;
+//        CGFloat w = self.view.width;
+//        CGFloat h = 216;
+//        _keyboard = [[LVKeyboardView alloc] initWithFrame:CGRectMake(x, y, w, h)];
+//        _keyboard.delegate = self;
+//    }
+//    return _keyboard;
+//}
+/***************结束*************/
 
 
 
