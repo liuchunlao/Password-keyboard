@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "c_chaKeyboardButton.png"
+      "filename" : "c_number_keyboardSwitchButtonSel.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "c_chaKeyboardButton@2x.png"
+      "filename" : "c_number_keyboardSwitchButtonSel@2x.png"
     },
     {
       "idiom" : "universal",
