@@ -13,13 +13,13 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "随机密码键盘."
 
-  s.homepage     = "http://github.com/liuchunlao/CustomKeyboard"
+  s.homepage     = "https://github.com/liuchunlao/Password-keyboard"
 
   s.license      = "MIT"
 
   s.author             = { "liuchunlao" => "liuchunlao@qq.com" }
 
-  s.source       = { :git => "http://github.com/liuchunlao/CustomKeyboard.git", :tag => "0.0.1" }
+  s.source       = { :git => "http://github.com/liuchunlao/Password-keyboard.git", :tag => "0.0.1" }
 
 
   s.source_files  = "CustomKeyboard", "CustomKeyboard/**/*.{h,m}"
