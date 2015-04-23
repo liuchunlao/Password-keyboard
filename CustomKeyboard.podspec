@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "随机密码键盘."
 
-  s.homepage     = "http://EXAMPLE/CustomKeyboard"
+  s.homepage     = "http://github.com/liuchunlao/CustomKeyboard"
 
   s.license      = "MIT"
 
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "http://github.com/liuchunlao/CustomKeyboard.git", :tag => "0.0.1" }
 
 
-  s.source_files  = "CustomKeyboard", "UIViewExtension/**/*.{h,m}"
+  s.source_files  = "CustomKeyboard", "CustomKeyboard/**/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
