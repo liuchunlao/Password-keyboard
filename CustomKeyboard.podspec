@@ -7,7 +7,7 @@ s.license      = "MIT"
 s.authors      = { 'liuchunlao' => 'liuchunlao@qq.com'}
 s.platform     = :ios, "6.0"
 s.source       = { :git => "https://github.com/liuchunlao/Password-keyboard.git", :tag => s.version }
-s.source_files = "MJRefreshExample/MJRefreshExample/MJRefresh/*.{h,m}"
-s.resource     = "MJRefreshExample/MJRefreshExample/MJRefresh/MJRefresh.bundle"
+s.source_files = "CustomKeyboard/CustomKeyboard/*.{h,m}"
+# s.resource     = "MJRefreshExample/MJRefreshExample/MJRefresh/MJRefresh.bundle"
 s.requires_arc = true
 end
